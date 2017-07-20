@@ -1,0 +1,800 @@
+.mouse{
+  left: 50%;
+  width: 20px;
+  height: 35px;
+  bottom: 20px;
+  z-index: 400;
+  position: absolute;
+  border-radius: 20px 20px;
+  transform: translateX(-50%);
+  border: solid 2px rgba( 66, 66, 66, 1);
+}
+.mouse:after{
+  left: 4px;
+  opacity: 1;
+  content: "";
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  top: calc(0% + 4px);
+  border-radius: 50% 50%;
+  animation: mouse 1s infinite;
+  background: rgba( 66, 66, 66, 1);
+}
+@keyframes mouse {
+  0% {
+    opacity: 1;
+    top: calc(0% + 4px);
+  }
+  30%{
+    top: calc(0% + 4px);
+  }
+  100% {
+    opacity: 0;
+    top: calc(100% - 16px);
+  }
+}
+.text {
+  fill: none;
+  stroke-width: 6;
+  stroke-linejoin: round;
+  stroke-dasharray: 70 330;
+  stroke-dashoffset: 0;
+  -webkit-animation: stroke 6s infinite linear;
+  animation: stroke 6s infinite linear;
+}
+
+.text:nth-child(5n + 1) {
+  stroke: rgb(230, 126, 34);
+  -webkit-animation-delay: -1.2s;
+  animation-delay: -1.2s;
+}
+.text:nth-child(5n + 2) {
+  stroke: rgb(26, 188, 156);
+  -webkit-animation-delay: -2.4s;
+  animation-delay: -2.4s;
+}
+
+.text:nth-child(5n + 3) {
+  stroke: rgb(52, 152, 219);
+  -webkit-animation-delay: -3.6s;
+  animation-delay: -3.6s;
+}
+
+.text:nth-child(5n + 4) {
+  stroke: rgb(155, 89, 182);
+  -webkit-animation-delay: -4.8s;
+  animation-delay: -4.8s;
+}
+
+.text:nth-child(5n + 5) {
+  stroke: rgb(231, 76, 60);
+  -webkit-animation-delay: -6s;
+  animation-delay: -6s;
+}
+
+@keyframes back {
+  0% {
+    background: rgb(230, 126, 34);
+  }
+  20% {
+    background: rgb(26, 188, 156);
+  }
+  40% {
+    background: rgb(52, 152, 219);
+  }
+  60% {
+    background: rgb(155, 89, 182);
+  }
+  80% {
+    background: rgb(231, 76, 60);
+  }
+  100% {
+    background: rgb(230, 126, 34);
+  }
+}
+
+@-webkit-keyframes stroke {
+  100% {
+    stroke-dashoffset: -400;
+  }
+}
+
+@keyframes stroke {
+  100% {
+    stroke-dashoffset: -400;
+  }
+}
+
+/* Other styles */
+html, body {
+  height: 100%;
+  font-size: 16px;
+}
+
+* {
+  outline: none;
+  cursor: default;
+  font-family: "Arial";
+}
+
+a,
+button,
+input[type="submit"]{
+  cursor: pointer;
+}
+
+input[type="text"],
+input[type="password"]{
+  cursor: text;
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+  background: rgb(189, 195, 199);
+}
+
+.bo{
+  overflow: auto !important;
+}
+
+#Loggin{
+  top: 0px;
+  left: 0px;
+  opacity: 1;
+  width: 100%;
+  height: 100%;
+  z-index: 600;
+  position: fixed;
+  transition: all linear 0.3s;
+  background: rgb(189, 195, 199);
+}
+
+.ld{
+  opacity: 0 !important;
+}
+
+.ldd{
+  display: none !important;
+}
+
+svg {
+  top: 20%;
+  width: 100%;
+  height: 30%;
+  position: absolute;
+  font: 14.5em/1 "Arial";
+  font-weight: bold !important;
+}
+
+#mainLog {
+  top: 50%;
+  width: 100%;
+  height: 40px;
+  position: absolute;
+  text-align: center;
+}
+
+#mainLog input[type="text"],
+#mainLog input[type="password"]{
+  width: 260px;
+  height: 40px;
+  padding: 0px 0px;
+  border: solid 0px;
+  margin-left: 20px;
+  font-weight: bold;
+  margin-right: 20px;
+  text-align: center;
+  animation: back 25s infinite;
+  transition: box-shadow linear 0.2s;
+  color: rgb( 220, 220, 220) !important;
+  box-shadow: 0px 0px 0px rgba( 200, 200, 200, 0);
+}
+
+#mainLog ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: rgb( 220, 220, 220);
+  font-weight: bold;
+}
+#mainLog ::-moz-placeholder { /* Firefox 19+ */
+  color: rgb( 220, 220, 220);
+  font-weight: bold;
+}
+#mainLog :-ms-input-placeholder { /* IE 10+ */
+  color: rgb( 220, 220, 220);
+  font-weight: bold;
+}
+#mainLog :-moz-placeholder { /* Firefox 18- */
+  color: rgb( 220, 220, 220);
+  font-weight: bold;
+}
+
+#mainLog input[type="text"]:focus,
+#mainLog input[type="password"]:focus{
+  box-shadow: 0px 0px 50px rgba( 140, 140, 140, 1);
+}
+
+#mainLog input[type="submit"]{
+  width: 110px;
+  height: 40px;
+  margin-top: 30px;
+  padding: 0px 0px;
+  border: solid 0px;
+  margin-left: 20px;
+  font-weight: bold;
+  margin-right: 20px;
+  text-align: center;
+  color: rgb( 80, 80, 80);
+  background: rgb( 160, 160, 160);
+  transition: box-shadow linear 0.2s;
+  box-shadow: 0px 0px 0px rgba( 22, 22, 22, 0);
+}
+
+#mainLog input[type="submit"]:hover{
+  box-shadow: 0px 0px 20px 2px rgba( 14, 14, 14, 0.1);
+}
+
+#botShadow{
+  width: 100%;
+  height: 100px;
+  bottom: -100px;
+  position: fixed;
+  border-radius: 100% 100%;
+  box-shadow: 0px 0px 170px 40px rgb(107, 120, 121);
+}
+
+#space {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+header {
+  width: 100%;
+  height: 50px;
+  z-index: 300;
+  position: fixed;
+  background: rgb( 219, 225, 229);
+}
+
+header #Title {
+  height: 50px;
+  display: table;
+  width: 202.56px;
+  font-size: 18px;
+  line-height: 48px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  color: rgb( 33, 33, 33);
+  background: rgb(189, 195, 199);
+}
+
+header #is {
+  top: 0px;
+  right: 0px;
+  height: 50px;
+  line-height: 50px;
+  border: solid 0px;
+  text-align: center;
+  position: absolute;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-transform: uppercase;
+  background: rgb(219, 225, 229);
+}
+
+#is a {
+
+  padding-left: 10px;
+  text-decoration: none;
+  color: rgb( 33, 33, 33);
+  font-weight: bold;
+}
+
+#cover {
+  width: 100%;
+  float: left;
+  z-index: 300;
+  height: 350px;
+  position: fixed;
+  overflow: hidden;
+  margin-top: 50px;
+}
+
+#cover section {
+  z-index:1;
+  width: 100%;
+  content: "";
+  height: 300px;
+  position: absolute;
+  padding-top: 100px;
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-bottom: 100px;
+  margin-top: -100px;
+  margin-left: -100px;
+  transition: all linear 0.3s;
+	background: url('/public/img/cover/movie1.jpg');
+  background-position: center;
+	background-size:cover;
+	-webkit-filter: blur(30px);
+  -moz-filter: blur(30px);
+  -o-filter: blur(30px);
+  -ms-filter: blur(30px);
+  filter: blur(30px);
+}
+
+#cover img {
+  z-index: 2;
+  float: left;
+  position: absolute;
+  transition: all linear 0.3s;
+  //box-shadow: 0px 0px 50px 5px rgba( 1, 1, 1, 0.5);
+}
+
+#cover #info {
+  z-index: 2;
+  float: left;
+  left: 202.56px;
+  position: absolute;
+  width: calc( 100% - 202.56px);
+}
+
+#cover #info #infTitle {
+  width: 100%;
+  height: 40px;
+  font-size: 18px;
+  line-height: 40px;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  color: rgba( 255, 255, 255, 0.9);
+  background: rgba( 250, 250, 250, 0.3);
+}
+
+#cover #info #infTitle a {
+  top: 5px;
+  right: 10px;
+  height: 30px;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 30px;
+  border: solid 0px;
+  position: absolute;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-decoration: none;
+  border-radius: 4px 4px;
+  transition: all linear 0.2s;
+  color: rgba( 250, 250, 250, 1);
+  background: rgba( 26, 188, 156, 0.6);
+}
+
+#cover #info #infTitle a:hover {
+background: rgba( 26, 188, 156, 1);
+}
+
+#cover #info #infMovie {
+  float: left;
+  height: 260px;
+  overflow: auto;
+  font-size: 18px;
+  line-height: 30px;
+  text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: calc(100% - 420px);
+  color: rgba( 255, 255, 255, 0.9);
+  background: rgba( 180, 180, 180, 0.3);
+}
+
+#cover #info #infMovie span {
+  font-weight: bold;
+  line-height: 40px;
+}
+
+#cover #info #infMovie p {
+  margin-top: -9px;
+}
+
+#cover #info #infRepart {
+  top: 40px;
+  right: 0px;
+  float: left;
+  width: 400px;
+  height: 260px;
+  font-size: 18px;
+  line-height: 30px;
+  text-align: center;
+  color: rgba( 255, 255, 255, 0.9);
+  background: rgba( 120, 120, 120, 0.3);
+}
+
+#cover #info #infRepart span {
+  font-weight: bold;
+  line-height: 40px;
+}
+
+#cover #info #infMovie div,
+#cover #info #infRepart div {
+  top: 50%;
+  width: 100%;
+  position: relative;
+  transform: translateY( calc(-50% - 5px));
+}
+
+#cover #info #Cartelera {
+  top: 0px;
+  float: left;
+  height: 260px;
+  font-size: 18px;
+  line-height: 50px;
+  text-align: center;
+  position: relative;
+  margin-left: -202.56px;
+  width: calc( 100% + 202.56px);
+  color: rgba( 180, 180, 180, 0.9);
+  background: rgba( 30, 30, 30, 0.5);
+}
+
+#cover #info #Cartelera span {
+  font-weight: bold;
+  line-height: 40px;
+}
+
+#cover #info #Cartelera a {
+  top: 10px;
+  right: 10px;
+  height: 30px;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 30px;
+  border: solid 0px;
+  position: absolute;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-decoration: none;
+  border-radius: 4px 4px;
+  background: rgba( 1, 1, 1, 0.4);
+  color: rgba( 220, 220, 220, 0.8);
+}
+
+#Movies {
+  top: 400px;
+  width: 100%;
+  overflow-y: auto;
+  position: absolute;
+  height: calc(100% - 400px);
+}
+
+.movie {
+  width: 20%;
+  float: left;
+  padding: 0px 0px;
+  border: solid 0px;
+  position: relative;
+}
+
+.movie:hover div, .movie:hover a {
+  opacity: 1;
+}
+
+.movie img {
+  width: 100%;
+  margin-bottom: -3px;
+}
+
+.movie > div {
+  top: 0px;
+  left: 0px;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 20px;
+  font-weight: bold;
+  position: absolute;
+  text-decoration: none;
+  transition: opacity 0.5s;
+  text-transform: uppercase;
+  color: rgb( 220, 220, 220);
+  background: rgba( 11, 11, 11, 0.7);
+}
+
+.movie > div span {
+  top: 50%;
+  line-height: 30px;
+  position: absolute;
+  transform: translate( -50%, -50%);
+}
+
+.movie a {
+  top: 10px;
+  opacity: 0;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 26px;
+  position: absolute;
+  text-decoration: none;
+  border-radius: 50% 50%;
+  transition: opacity 1s;
+  color: rgb( 200, 200, 200);
+  background: rgba(231, 76, 60, 0.7);
+  border: solid 4px rgba(261, 106, 90, 0.3);
+}
+
+#add-movie {
+  top: 50px;
+  width: 100%;
+  z-index: 300;
+  position: absolute;
+  height: calc( 100% - 50px);
+}
+
+#add-movie form {
+  width: 900px;
+  height: auto;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: auto;
+}
+
+#add-movie form select,
+#add-movie form select option,
+#add-movie form input[type="password"],
+#add-movie form input[type="text"] {
+  width: 400px;
+  height: 40px;
+  font-size: 14px;
+  font-weight: bold;
+  border: solid 0px;
+  margin-bottom: 30px;
+  color: rgb( 130, 130, 130);
+  text-align: center !important;
+  background: rgb( 219, 225, 229);
+  transition: box-shadow linear 0.2s;
+  box-shadow: 0px 0px 0px rgba( 200, 200, 200, 0);
+}
+
+.add-user form select,
+.add-user form select option,
+.add-user form input[type="password"],
+.add-user form input[type="text"] {
+  width: 400px;
+  height: 40px;
+  font-size: 14px;
+  font-weight: bold;
+  border: solid 0px;
+  margin-left: 292px;
+  margin-bottom: 30px;
+  color: rgb( 130, 130, 130);
+  text-align: center !important;
+  background: rgb( 219, 225, 229);
+  transition: box-shadow linear 0.2s;
+  box-shadow: 0px 0px 0px rgba( 200, 200, 200, 0);
+}
+
+.custom-file-upload:hover,
+#add-movie form input[type="password"]:hover,
+#add-movie form input[type="password"]:focus,
+#add-movie form input[type="text"]:hover,
+#add-movie form input[type="text"]:focus {
+  box-shadow: 0px 0px 20px rgba( 160, 160, 160, 0.8);
+}
+
+#add-movie form input[type="submit"] {
+  width: 250px;
+  height: 40px;
+  font-size: 14px;
+  font-weight: bold;
+  border: solid 0px;
+  margin-left: 375px;
+  text-align: center;
+  margin-right: auto;
+  color: rgb( 77, 77, 77);
+  background: rgb( 159, 165, 169);
+  transition: box-shadow linear 0.2s;
+  box-shadow: 0px 0px 0px rgba( 200, 200, 200, 0);
+}
+
+.custom-file-upload{
+  float: right;
+  width: 243px;
+  height: 42px;
+  cursor: text;
+  font-size: 14px;
+  padding: 0px 0px;
+  font-weight: bold;
+  border: solid 0px;
+  text-align: center;
+  line-height: 42px !important;
+  background: rgb( 219, 225, 229);
+  transition: box-shadow linear 0.2s;
+  box-shadow: 0px 0px 0px rgba( 200, 200, 200, 0);
+}
+input[type="file"] {
+  display: none;
+}
+.custom-file-upload{
+  cursor: pointer;
+  line-height: 40px;
+  color: rgb( 130, 130, 130);
+}
+.custom-file-upload img{
+  width: 100%;
+  display: none;
+}
+
+#buy {
+  top: 50px;
+  width: 100%;
+  z-index: 300;
+  position: absolute;
+  height: calc( 100% - 50px);
+  background: rgba( 31, 31, 31, 0.4);
+}
+
+#buy #formu {
+  top: 5%;
+  left: 3%;
+  width: 94%;
+  height: 90%;
+  position: absolute;
+}
+
+#buy #formu img {
+  height: 51%;
+  position: absolute;
+}
+
+#buy #formu #title {
+  right: 0px;
+  width: 90%;
+  font-size: 20px;
+  font-weight: bold;
+  position: absolute;
+  text-align: center;
+  color: rgba( 220, 220, 220, 0.8);
+}
+
+#buy #formu #form {
+  top: 50px;
+  right: 0px;
+  width: 90%;
+  font-size: 20px;
+  font-weight: bold;
+  position: absolute;
+  text-align: center;
+  margin-top: -20px;
+  color: rgba( 220, 220, 220, 0.8);
+}
+
+#buy #formu #form input[type="number"] {
+  width: 100px;
+  height: 30px;
+  border: solid 0px;
+  text-align: center;
+  border-radius: 8px 8px;
+  color: rgba( 220, 220, 220, 0.8);
+  background: rgba( 16, 16, 16, 0.4);
+}
+
+#buy #formu #form #comprar {
+  width: 100px;
+  height: 30px;
+  border: solid 0px;
+  text-align: center;
+  border-radius: 8px 8px;
+  color: rgba( 220, 220, 220, 0.8);
+  background: rgba(22, 160, 133,1.0) !important;
+}
+
+#buy #sala {
+  right: 0px;
+  bottom: 0px;
+  height: 44%;
+  width: 100%;
+  position: absolute;
+  border-radius: 0px 0px 18px 18px;
+  background: rgba( 170, 170, 170, 0.4);
+}
+
+#buy #salaBlock {
+  right: 0px;
+  bottom: 0px;
+  height: 44%;
+  width: 100%;
+  z-index: 300;
+  position: absolute;
+  border-radius: 0px 0px 18px 18px;
+  background: rgba( 170, 170, 170, 0.7);
+}
+
+#buy #sala .fill {
+  width: 100%;
+  height: 20%;
+  position: absolute;
+  transition: all linear 0.2s;
+  background: rgba( 140, 140, 140, 0.2);
+}
+
+#buy #sala .fill:hover {
+  background: rgba( 200, 200, 200, 0.2);
+}
+
+#buy #sala .fill .SF {
+  width: 30px;
+  height: 100%;
+  font-size: 20px;
+  font-weight: bold;
+  border: solid 0px;
+  position: absolute;
+  color: rgba( 44, 44, 44, 0.9);
+  background: rgba( 220, 220, 220, 0.2);
+}
+
+#buy #sala .fill div {
+  left: 30px;
+  height: 100%;
+  position: absolute;
+  width: calc(100% - 30px);
+}
+
+#buy #sala .fill div .asiento {
+  top: 10%;
+  width: 5%;
+  float: left;
+  height: 80%;
+  font-size: 14px;
+  padding: 0px 0px;
+  margin-left: 2.5%;
+  font-weight: bold;
+  border: solid 0px;
+  margin-right: 2.5%;
+  position: relative;
+  transition: all linear 0.2s;
+  color: rgba( 44, 44, 44, 0.7);
+  border-radius: 4px 4px 12px 12px;
+  background: rgba( 220, 220, 220, 0.4);
+}
+
+#buy #sala .fill div .asiento:hover {
+  background: rgba( 220, 220, 220, 0.6);
+}
+
+#buy #sala .fill div .asiento * {
+  cursor: pointer;
+}
+
+.asmi {
+  background: rgba(26, 188, 156,1.0) !important;
+}
+
+.asoc {
+  color: rgba( 220, 220, 220, 0.7) !important;
+  background: rgba(231, 76, 60,1.0) !important;
+}
+
+#secback {
+  z-index:1;
+  width: 100%;
+  content: "";
+  height: 100%;
+  position: absolute;
+  padding-top: 100px;
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-bottom: 100px;
+  margin-top: -100px;
+  margin-left: -100px;
+  transition: all linear 0.3s;
+	-webkit-filter: blur(30px);
+  -moz-filter: blur(30px);
+  -o-filter: blur(30px);
+  -ms-filter: blur(30px);
+  filter: blur(30px);
+}
