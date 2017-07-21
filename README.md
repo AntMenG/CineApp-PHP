@@ -1,5 +1,8 @@
 <h1>Application Based on Cinema Systems</h1>
 <p>
+	Application with film billboard, selection of seats in a simulated cinema, sale of electronic money, three types of users, etc.
+</p>
+<p>
 	Developed with
 	<ul>
 		<li>HTML</li>
