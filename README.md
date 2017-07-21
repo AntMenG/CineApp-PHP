@@ -13,3 +13,9 @@
 	</ul>
 </p>
 <img src="Cinetron.png" width="100%">
+<p>
+	Developed by
+	<a href="https://www.facebook.com/AntMenGo">
+		Antonio Mendoza
+	</a>
+</p>
