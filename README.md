@@ -3,14 +3,14 @@
 	Application with film billboard, selection of seats in a simulated cinema, sale of electronic money, three types of users, etc.
 </p>
 <p>
-	Developed with
+	<b>Developed with</b>
 	<ul>
 		<li>HTML</li>
 		<li>CSS</li>
 		<li>JS & JQuery</li>
 		<li>PHP</li>
 	</ul>
-	Database
+	<b>Database</b>
 	<ul>
 		<li>MySQL</li>
 	</ul>
